@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id("net.serenity-bdd.serenity-gradle-plugin") version "4.1.3"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'net.serenity-bdd:serenity-core:2.4.24'
+    testImplementation 'net.serenity-bdd:serenity-cucumber6:2.4.24'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.30'
+    testImplementation 'io.cucumber:cucumber-java:6.10.4'
+    testImplementation 'io.cucumber:cucumber-junit:6.10.4'
+
+    // JUnit Jupiter (JUnit 5)
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
